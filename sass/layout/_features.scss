@@ -1,0 +1,19 @@
+.features-item {
+  flex-basis: calc((100% - 120px) / 4);
+}
+
+.features-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.icon-container {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: var(--light-bg-color);
+}
