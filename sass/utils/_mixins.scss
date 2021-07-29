@@ -1,3 +1,10 @@
 @mixin transition($property, $duration: 250ms) {
   transition: $property $duration var(--transition);
 }
+
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
