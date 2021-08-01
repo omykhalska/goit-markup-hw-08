@@ -1,11 +1,12 @@
-.work-list-item {
-  position: relative;
-
-  flex-basis: calc((100% - 90px) / 3);
+.work {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
-.work-pic {
-  display: block;
+.work-list-item {
+  position: relative;
+  flex-basis: calc((100% - 90px) / 3);
 }
 
 .work-desc-box {
@@ -23,8 +24,7 @@
 }
 
 .work-desc {
-  font-weight: 700;
-  line-height: 1.14;
+  @include font(700, 14px, 1.14);
   text-transform: uppercase;
   text-align: center;
   color: var(--secondary-text-color);

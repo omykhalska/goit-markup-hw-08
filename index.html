@@ -79,11 +79,11 @@
       </section>
 
       <!-- FEATURES -->
-      <!-- <section class="features section">
+      <section class="features section">
         <div class="container">
           <h2 class="visually-hidden">Преимущества WebStudio</h2>
-          <ul class="features-list grid-wrapper list">
-            <li class="features-item grid-item">
+          <ul class="features-list list">
+            <li class="features-item">
               <div class="icon-container">
                 <svg class="icon" width="70px" height="70px">
                   <use href="./images/icons.svg#icon-antenna"></use>
@@ -95,7 +95,7 @@
                 формированию позиции.
               </p>
             </li>
-            <li class="features-item grid-item">
+            <li class="features-item">
               <div class="icon-container">
                 <svg class="icon" width="70px" height="70px">
                   <use href="./images/icons.svg#icon-clock"></use>
@@ -107,7 +107,7 @@
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="features-item grid-item">
+            <li class="features-item">
               <div class="icon-container">
                 <svg class="icon" width="70px" height="70px">
                   <use href="./images/icons.svg#icon-diagram"></use>
@@ -119,7 +119,7 @@
                 степени обуславливает.
               </p>
             </li>
-            <li class="features-item grid-item">
+            <li class="features-item">
               <div class="icon-container">
                 <svg class="icon" width="70px" height="70px">
                   <use href="./images/icons.svg#icon-astronaut"></use>
@@ -133,17 +133,18 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- WORK -->
-      <!-- <section class="work section no-padding">
+      <section class="work section no-padding">
         <div class="container">
           <h2 class="section-title title-color">Чем мы занимаемся</h2>
           <ul class="work-list grid-wrapper list">
             <li class="work-list-item grid-item">
               <img
                 class="work-pic"
-                src="./images/services/service_1.jpg"
+                srcset="./images/desktop/service_1.jpg 1x, ./images/desktop/service_1@2x.jpg 2x"
+                src="./images/desktop/service_1.jpg"
                 alt="разработчик пишет код"
                 width="370"
                 height="294"
@@ -155,7 +156,8 @@
             <li class="work-list-item grid-item">
               <img
                 class="work-pic"
-                src="./images/services/service_2.jpg"
+                srcset="./images/desktop/service_2.jpg 1x, ./images/desktop/service_2@2x.jpg 2x"
+                src="./images/desktop/service_2.jpg"
                 alt="разработчик оптимизирует сайт для мобильных устройств"
                 width="370"
                 height="294"
@@ -167,7 +169,8 @@
             <li class="work-list-item grid-item">
               <img
                 class="work-pic"
-                src="./images/services/service_3.jpg"
+                srcset="./images/desktop/service_3.jpg 1x, ./images/desktop/service_3@2x.jpg 2x"
+                src="./images/desktop/service_3.jpg"
                 alt="разработчик подбирает цветовую схему для сайта"
                 width="370"
                 height="294"
@@ -178,21 +181,23 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- TEAM -->
-      <!-- <section class="team-members section">
+      <section class="team-members section">
         <div class="container">
           <h2 class="section-title title-color">Наша команда</h2>
-          <ul class="member-list grid-wrapper list">
-            <li class="member-item grid-item">
-              <img
-                class="member-photo"
-                src="./images/team/igor.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+          <ul class="member-list list">
+            <li class="member-item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/desktop/igor.webp 1x, ./images/desktop/igor@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./images/desktop/igor.jpg 1x, ./images/desktop/igor@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/igor.webp 1x, ./images/tablet/igor@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/igor.jpg 1x, ./images/tablet/igor@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/igor.webp 1x, ./images/mobile/igor@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/igor.jpg 1x, ./images/mobile/igor@2x.jpg 2x" type="image/jpeg" />
+                <img class="member-photo" src="./images/mobile/igor.jpg" alt="Игорь Демьяненко"/>
+              </picture>
               <h3 class="member-name title-color">Игорь Демьяненко</h3>
               <p class="member-post" lang="en">Product Designer</p>
               <div class="social-list-wrap">
@@ -225,14 +230,16 @@
                 </ul>
               </div>
             </li>
-            <li class="member-item grid-item">
-              <img
-                class="member-photo"
-                src="./images/team/olga.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+            <li class="member-item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/desktop/olga.webp 1x, ./images/desktop/olga@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./images/desktop/olga.jpg 1x, ./images/desktop/olga@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/olga.webp 1x, ./images/tablet/olga@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/olga.jpg 1x, ./images/tablet/olga@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/olga.webp 1x, ./images/mobile/olga@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/olga.jpg 1x, ./images/mobile/olga@2x.jpg 2x" type="image/jpeg" />
+                <img class="member-photo" src="./images/mobile/olga.jpg" alt="Ольга Репина"/>
+              </picture>
               <h3 class="member-name title-color">Ольга Репина</h3>
               <p class="member-post" lang="en">Frontend Developer</p>
               <div class="social-list-wrap">
@@ -265,14 +272,16 @@
                 </ul>
               </div>
             </li>
-            <li class="member-item grid-item">
-              <img
-                class="member-photo"
-                src="./images/team/nikolay.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+            <li class="member-item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/desktop/nikolay.webp 1x, ./images/desktop/nikolay@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./images/desktop/nikolay.jpg 1x, ./images/desktop/nikolay@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/nikolay.webp 1x, ./images/tablet/nikolay@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/nikolay.jpg 1x, ./images/tablet/nikolay@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/nikolay.webp 1x, ./images/mobile/nikolay@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/nikolay.jpg 1x, ./images/mobile/nikolay@2x.jpg 2x" type="image/jpeg" />
+                <img class="member-photo" src="./images/mobile/nikolay.jpg" alt="Николай Тарасов"/>
+              </picture>
               <h3 class="member-name title-color">Николай Тарасов</h3>
               <p class="member-post" lang="en">Marketing</p>
               <div class="social-list-wrap">
@@ -305,14 +314,16 @@
                 </ul>
               </div>
             </li>
-            <li class="member-item grid-item">
-              <img
-                class="member-photo"
-                src="./images/team/mihail.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+            <li class="member-item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/desktop/mihail.webp 1x, ./images/desktop/mihail@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 1200px)" srcset="./images/desktop/mihail.jpg 1x, ./images/desktop/mihail@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/mihail.webp 1x, ./images/tablet/mihail@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 768px)" srcset="./images/tablet/mihail.jpg 1x, ./images/tablet/mihail@2x.jpg 2x" type="image/jpeg" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/mihail.webp 1x, ./images/mobile/mihail@2x.webp 2x" type="image/webp" />
+                <source media="(min-width: 280px)" srcset="./images/mobile/mihail.jpg 1x, ./images/mobile/mihail@2x.jpg 2x" type="image/jpeg" />
+                <img class="member-photo" src="./images/mobile/mihail.jpg" alt="Михаил Ермаков"/>
+              </picture>
               <h3 class="member-name title-color">Михаил Ермаков</h3>
               <p class="member-post" lang="en">UI Designer</p>
               <div class="social-list-wrap">
@@ -347,10 +358,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- CLIENTS -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section-title title-color">Постоянные клиенты</h2>
           <ul class="clients-list list grid-wrapper">
@@ -393,7 +404,7 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main>
 
     <!-- FOOTER -->
     <!-- <footer class="footer">
