@@ -430,8 +430,8 @@ img {
 }
 
 .burger-btn__icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 16px;
 }
 
 .burger-btn:hover .burger-btn__icon, .burger-btn:focus .burger-btn__icon {
@@ -485,8 +485,8 @@ img {
 }
 
 .close-btn__icon {
-  width: 40px;
-  height: 40px;
+  width: 31px;
+  height: 31px;
 }
 
 .close-btn:hover .close-btn__icon, .close-btn:focus .close-btn__icon {
