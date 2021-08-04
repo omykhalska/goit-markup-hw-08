@@ -5,11 +5,13 @@
 
 .application-form-head {
   margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 20px, 1.5);
   text-align: center;
   color: var(--title-color);
+
+  @media screen and (min-width: $desktop) {
+    @include font(700, 20px, 1.15);
+  }
 }
 
 .application-form-field {
@@ -73,10 +75,13 @@
   }
 
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
+    @include font(400, 12px, 1.14);
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+
+    @media screen and (min-width: $desktop) {
+      @include font(400, 12px, 1.17);
+    }
   }
 }
 
@@ -88,6 +93,11 @@
 }
 
 .application-form-checkbox-label {
+
+  @media screen and (max-width: 1199px) {
+    @include font(400, 12px, 1.17);
+  }
+
   &::before {
     position: absolute;
     top: 50%;

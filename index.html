@@ -22,7 +22,7 @@
 
   <body>
     <!-- HEADER -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a class="logo link" href="./index.html" lang="en"
           ><span class="accent">Web</span>Studio</a
@@ -49,7 +49,7 @@
             <a
               class="header-contacts__link link"
               href="mailto:info@devstudio.com"
-              ><svg class="header-contacts__icon" width="16" height="12">
+              ><svg class="header-contacts__icon header-contacts__icon--envelope">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -57,15 +57,86 @@
           </li>
           <li class="header-contacts__item">
             <a class="header-contacts__link link" href="tel:+380961111111"
-              ><svg class="header-contacts__icon" width="10" height="16">
+              ><svg class="header-contacts__icon header-contacts__icon--smartphone">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+
+        <button class="burger-btn" aria-label="Меню" data-menu-open>
+          <svg class="burger-btn__icon">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button
+            class="close-btn mobile-menu__close-btn"
+            aria-label="Закрыть меню"
+            data-menu-close
+          >
+            <svg class="close-btn__icon">
+              <use href="./images/icons.svg#close-black"></use>
+            </svg>
+          </button>
+
+          <ul class="nav-list list">
+            <li class="nav-list__item">
+              <a
+                href="./index.html"
+                class="nav-list__link nav-list__link--current link"
+                >Студия</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a href="./portfolio.html" class="nav-list__link link"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link link">Контакты</a>
+            </li>
+          </ul>
+
+          <div>
+            <ul class="mobile-menu__contacts-list list">
+              <li class="mobile-menu__contacts-item">
+                <a
+                  href="tel:+380961111111"
+                  class="mobile-menu__tel-link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu__email-link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__social-list list">
+              <li class="mobile-menu__social-item">
+                <a href="#" class="mobile-menu__social-link link">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="#" class="mobile-menu__social-link link">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="#" class="mobile-menu__social-link link">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="#" class="mobile-menu__social-link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
       <!-- HERO -->
@@ -141,40 +212,54 @@
           <h2 class="section-title title-color">Чем мы занимаемся</h2>
           <ul class="work-list grid-wrapper list">
             <li class="work-list-item grid-item">
-              <img
-                class="work-pic"
-                srcset="./images/desktop/service_1.jpg 1x, ./images/desktop/service_1@2x.jpg 2x"
-                src="./images/desktop/service_1.jpg"
-                alt="разработчик пишет код"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/service_1.jpg    1x,
+                    ./images/desktop/service_1@2x.jpg 2x
+                  "
+                />
+                <img class="work-pic" src="#" alt="разработчик пишет код" />
+              </picture>
               <div class="work-desc-box">
                 <p class="work-desc">Десктопные приложения</p>
               </div>
             </li>
             <li class="work-list-item grid-item">
-              <img
-                class="work-pic"
-                srcset="./images/desktop/service_2.jpg 1x, ./images/desktop/service_2@2x.jpg 2x"
-                src="./images/desktop/service_2.jpg"
-                alt="разработчик оптимизирует сайт для мобильных устройств"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/service_2.jpg    1x,
+                    ./images/desktop/service_2@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="work-pic"
+                  src="#"
+                  alt="разработчик оптимизирует сайт для мобильных устройств"
+                />
+              </picture>
               <div class="work-desc-box">
                 <p class="work-desc">Мобильные приложения</p>
               </div>
             </li>
             <li class="work-list-item grid-item">
-              <img
-                class="work-pic"
-                srcset="./images/desktop/service_3.jpg 1x, ./images/desktop/service_3@2x.jpg 2x"
-                src="./images/desktop/service_3.jpg"
-                alt="разработчик подбирает цветовую схему для сайта"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/service_3.jpg    1x,
+                    ./images/desktop/service_3@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="work-pic"
+                  src="#"
+                  alt="разработчик подбирает цветовую схему для сайта"
+                />
+              </picture>
               <div class="work-desc-box">
                 <p class="work-desc">Дизайнерские решения</p>
               </div>
@@ -190,13 +275,59 @@
           <ul class="member-list list">
             <li class="member-item">
               <picture>
-                <source media="(min-width: 1200px)" srcset="./images/desktop/igor.webp 1x, ./images/desktop/igor@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 1200px)" srcset="./images/desktop/igor.jpg 1x, ./images/desktop/igor@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/igor.webp 1x, ./images/tablet/igor@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/igor.jpg 1x, ./images/tablet/igor@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/igor.webp 1x, ./images/mobile/igor@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/igor.jpg 1x, ./images/mobile/igor@2x.jpg 2x" type="image/jpeg" />
-                <img class="member-photo" src="./images/mobile/igor.jpg" alt="Игорь Демьяненко"/>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/igor.webp    1x,
+                    ./images/desktop/igor@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/igor.jpg    1x,
+                    ./images/desktop/igor@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/igor.webp    1x,
+                    ./images/tablet/igor@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/igor.jpg    1x,
+                    ./images/tablet/igor@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/igor.webp    1x,
+                    ./images/mobile/igor@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/igor.jpg    1x,
+                    ./images/mobile/igor@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="member-photo"
+                  src="./images/mobile/igor.jpg"
+                  alt="Игорь Демьяненко"
+                />
               </picture>
               <h3 class="member-name title-color">Игорь Демьяненко</h3>
               <p class="member-post" lang="en">Product Designer</p>
@@ -232,13 +363,59 @@
             </li>
             <li class="member-item">
               <picture>
-                <source media="(min-width: 1200px)" srcset="./images/desktop/olga.webp 1x, ./images/desktop/olga@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 1200px)" srcset="./images/desktop/olga.jpg 1x, ./images/desktop/olga@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/olga.webp 1x, ./images/tablet/olga@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/olga.jpg 1x, ./images/tablet/olga@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/olga.webp 1x, ./images/mobile/olga@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/olga.jpg 1x, ./images/mobile/olga@2x.jpg 2x" type="image/jpeg" />
-                <img class="member-photo" src="./images/mobile/olga.jpg" alt="Ольга Репина"/>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/olga.webp    1x,
+                    ./images/desktop/olga@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/olga.jpg    1x,
+                    ./images/desktop/olga@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/olga.webp    1x,
+                    ./images/tablet/olga@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/olga.jpg    1x,
+                    ./images/tablet/olga@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/olga.webp    1x,
+                    ./images/mobile/olga@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/olga.jpg    1x,
+                    ./images/mobile/olga@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="member-photo"
+                  src="./images/mobile/olga.jpg"
+                  alt="Ольга Репина"
+                />
               </picture>
               <h3 class="member-name title-color">Ольга Репина</h3>
               <p class="member-post" lang="en">Frontend Developer</p>
@@ -274,13 +451,59 @@
             </li>
             <li class="member-item">
               <picture>
-                <source media="(min-width: 1200px)" srcset="./images/desktop/nikolay.webp 1x, ./images/desktop/nikolay@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 1200px)" srcset="./images/desktop/nikolay.jpg 1x, ./images/desktop/nikolay@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/nikolay.webp 1x, ./images/tablet/nikolay@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/nikolay.jpg 1x, ./images/tablet/nikolay@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/nikolay.webp 1x, ./images/mobile/nikolay@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/nikolay.jpg 1x, ./images/mobile/nikolay@2x.jpg 2x" type="image/jpeg" />
-                <img class="member-photo" src="./images/mobile/nikolay.jpg" alt="Николай Тарасов"/>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/nikolay.webp    1x,
+                    ./images/desktop/nikolay@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/nikolay.jpg    1x,
+                    ./images/desktop/nikolay@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/nikolay.webp    1x,
+                    ./images/tablet/nikolay@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/nikolay.jpg    1x,
+                    ./images/tablet/nikolay@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/nikolay.webp    1x,
+                    ./images/mobile/nikolay@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/nikolay.jpg    1x,
+                    ./images/mobile/nikolay@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="member-photo"
+                  src="./images/mobile/nikolay.jpg"
+                  alt="Николай Тарасов"
+                />
               </picture>
               <h3 class="member-name title-color">Николай Тарасов</h3>
               <p class="member-post" lang="en">Marketing</p>
@@ -316,13 +539,59 @@
             </li>
             <li class="member-item">
               <picture>
-                <source media="(min-width: 1200px)" srcset="./images/desktop/mihail.webp 1x, ./images/desktop/mihail@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 1200px)" srcset="./images/desktop/mihail.jpg 1x, ./images/desktop/mihail@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/mihail.webp 1x, ./images/tablet/mihail@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 768px)" srcset="./images/tablet/mihail.jpg 1x, ./images/tablet/mihail@2x.jpg 2x" type="image/jpeg" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/mihail.webp 1x, ./images/mobile/mihail@2x.webp 2x" type="image/webp" />
-                <source media="(min-width: 280px)" srcset="./images/mobile/mihail.jpg 1x, ./images/mobile/mihail@2x.jpg 2x" type="image/jpeg" />
-                <img class="member-photo" src="./images/mobile/mihail.jpg" alt="Михаил Ермаков"/>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/mihail.webp    1x,
+                    ./images/desktop/mihail@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/mihail.jpg    1x,
+                    ./images/desktop/mihail@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/mihail.webp    1x,
+                    ./images/tablet/mihail@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/mihail.jpg    1x,
+                    ./images/tablet/mihail@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/mihail.webp    1x,
+                    ./images/mobile/mihail@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mobile/mihail.jpg    1x,
+                    ./images/mobile/mihail@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="member-photo"
+                  src="./images/mobile/mihail.jpg"
+                  alt="Михаил Ермаков"
+                />
               </picture>
               <h3 class="member-name title-color">Михаил Ермаков</h3>
               <p class="member-post" lang="en">UI Designer</p>
@@ -407,7 +676,7 @@
     </main>
 
     <!-- FOOTER -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-flex">
         <div class="address">
           <a class="logo footer-logo link" href="./index.html" lang="en"
@@ -488,7 +757,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- BACKDROP & MODAL -->
     <div class="backdrop is-hidden" data-modal>
@@ -583,6 +852,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

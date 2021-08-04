@@ -1,23 +1,32 @@
 .gallery-btn-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-left: -8px;
+  margin-top: -15px;
+
+  @media screen and (min-width: $tablet) {
+   justify-content: center; 
+   margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+   }
 }
 
 .gallery-btn-item {
-  &:not(:first-child) {
     margin-left: 8px;
-  }
+    margin-top: 15px;
 }
+
 .gallery-btn {
   display: inline-block;
   padding: 6px 22px;
   background-color: var(--light-bg-color);
   color: var(--title-color);
   font-family: var(--main-font);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
+  @include font(500, 16px, 1.62);
   letter-spacing: 0.03em;
   border: none;
   border-radius: 4px;
@@ -43,12 +52,22 @@
 }
 
 .gallery-item {
-  flex-basis: calc((100% - 90px) / 3);
+  display: flex;
+  flex-basis: calc(100% - 30px);
   background-color: var(--secondary-text-color);
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 .gallery-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   @include transition(box-shadow);
 
   &:hover,
@@ -61,10 +80,6 @@
 .gallery-img-box {
   position: relative;
   overflow: hidden;
-}
-
-.gallery-img {
-  display: block;
 }
 
 .gallery-popup-desc {
@@ -95,6 +110,7 @@
 }
 
 .gallery-desc-wrapper {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid var(--card-border-color);
   border-top: none;

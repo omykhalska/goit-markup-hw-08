@@ -5,19 +5,184 @@
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.burger-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    .burger-btn__icon {
+      fill: var(--accent-color);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--secondary-text-color);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms var(--transition),
+    visibility 250ms var(--transition);
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.mobile-menu__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  height: 100%;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    .close-btn__icon {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.nav-list__item:not(:last-child),
+.mobile-menu__contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.nav-list__link {
+  @include font(500, 40px, 1.17);
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &--current {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu__contacts-list {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__tel-link {
+  @include font(500, 34px, 1.17);
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mobile-menu__email-link {
+  @include font(500, 24px, 1.17);
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu__social-list {
+  display: flex;
   flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.mobile-menu__social-item {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.mobile-menu__social-link {
+  @include font(500, 18px, 1.22);
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 .navigation {
-  margin-left: 90px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+}
+
+.header-contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
-
-  font-weight: 500;
-  line-height: 1.14;
+  @include font(500, 14px, 1.14);
   letter-spacing: 0.02em;
 }
 
@@ -56,35 +221,62 @@
 }
 
 .header-contacts {
-  margin-left: auto;
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
 
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 
 .header-contacts__item {
-  &:not(:first-child) {
-    margin-left: 50px;
+  @media screen and (min-width: $desktop) {
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
   }
 }
 
 .header-contacts__link {
-  display: flex;
-  align-items: center;
-  padding: 32px 0;
   color: inherit;
   @include transition(color);
+  @include font(500, 12px, 1.17);
 
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
   }
 }
 
 .header-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+
+  &--envelope {
+    width: 14px;
+    height: 10px;
+
+    @media screen and (min-width: $desktop) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+
+  &--smartphone {
+    width: 10px;
+    height: 14px;
+
+    @media screen and (min-width: $desktop) {
+      height: 16px;
+    }
+  }
 }
