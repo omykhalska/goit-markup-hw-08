@@ -47,6 +47,7 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--secondary-text-color);
+  overflow: auto;
 
   opacity: 0;
   visibility: hidden;
@@ -96,6 +97,10 @@
   position: absolute;
   top: 10px;
   right: 15px;
+}
+
+.nav-list {
+  margin-bottom: 30px;
 }
 
 .nav-list__item:not(:last-child),
