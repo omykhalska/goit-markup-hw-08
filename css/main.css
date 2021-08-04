@@ -495,7 +495,7 @@ img {
 
 .mobile-menu__close-btn {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
 }
 
@@ -701,7 +701,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 480px;
   height: 400px;
   margin: 0 auto;
   border: 1px solid #000000;
@@ -735,7 +734,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-bg-image.jpg);
   }
 }
